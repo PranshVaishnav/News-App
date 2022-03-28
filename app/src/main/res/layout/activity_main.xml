@@ -32,7 +32,31 @@
         </RelativeLayout>
     </Toolbar>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idToolbar"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/categories_rv_item" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/idRVCategories"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/news_rv_item" />
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/idPBLoading"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>
